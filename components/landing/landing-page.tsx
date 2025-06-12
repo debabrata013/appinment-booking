@@ -263,7 +263,7 @@ export function LandingPage() {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.pexels.com/photos/7359577/pexels-photo-7359577.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Medical Team"
                 className="rounded-2xl shadow-xl"
               />
