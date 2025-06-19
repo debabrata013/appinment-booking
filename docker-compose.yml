@@ -1,0 +1,6 @@
+services:
+  appintment-application:
+    image: priyanshijat6701/appointment-mini:latest
+    container_name: appointment-app
+    ports:
+      - "3000:3000"
