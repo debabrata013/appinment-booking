@@ -1,28 +1,42 @@
 pipeline {
-    agent any;
-    stages{
-        stage("clone code from github"){
-            steps{
+    agent any
+
+    stages {
+        stage("Clone code from GitHub") {
+            steps {
                 git branch: 'main', url: "https://github.com/priyanshijat/appointment-booking.git"
             }
         }
-        stage("build a docker image"){
-            steps{
+
+        stage("Build a Docker image") {
+            steps {
                 sh "docker build -t appointment-image ."
             }
         }
-        stage("test an application"){
-            steps{
-                sh "test developer krege0"
+
+        stage("Test the application") {
+            steps {
+                // Replace this with actual test command
+                sh "echo 'Running tests...'" 
+                // OR if you have a test script:
+                // sh "./run-tests.sh"
             }
         }
-        stage("get notification on email"){
-            steps{
-                emailext body: 'build sucessful',
-                    subject: 'congratulations for successful build',
+
+        stage("Get notification on email") {
+            steps {
+                emailext(
+                    subject: 'Congratulations on successful build',
+                    body: 'The Jenkins build was successful.',
                     to: 'priyanshijat06@gmail.com'
+                )
             }
         }
-        stage("deploy an appilication"){
-            steps{
-                sh "docker compose up -d"
+
+        stage("Deploy the application") {
+            steps {
+                sh "docker-compose up -d"
+            }
+        }
+    }
+}
