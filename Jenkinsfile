@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Clone code from GitHub") {
             steps {
-                git branch: 'main', url: "https://github.com/priyanshijat/appointment-booking.git"
+                git branch: 'main', url: "https://github.com/debabrata013/appinment-booking.git"
             }
         }
 
