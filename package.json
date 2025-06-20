@@ -1,12 +1,40 @@
 {
-  "name": "appointment-booking-system",
-  "version": "0.1.0",
+  "name": "medibook-india-appointment-system",
+  "version": "1.0.0",
+  "description": "Healthcare appointment booking platform for India - connecting patients with verified healthcare professionals across the country",
   "private": true,
+  "author": {
+    "name": "MediBook India Pvt. Ltd.",
+    "email": "tech@medibook.in",
+    "url": "https://medibook.in"
+  },
+  "homepage": "https://medibook.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medibook-india/appointment-system.git"
+  },
+  "keywords": [
+    "healthcare",
+    "appointments",
+    "doctors",
+    "medical",
+    "booking",
+    "india",
+    "telemedicine",
+    "health-records",
+    "nextjs",
+    "react",
+    "typescript"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
