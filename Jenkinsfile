@@ -23,15 +23,7 @@ pipeline {
             }
         }
 
-        stage("Get notification on email") {
-            steps {
-                emailext(
-                    subject: 'Congratulations on successful build',
-                    body: 'The Jenkins build was successful.',
-                    to: 'priyanshijat06@gmail.com'
-                )
-            }
-        }
+      
 
         stage("Deploy the application") {
             steps {
