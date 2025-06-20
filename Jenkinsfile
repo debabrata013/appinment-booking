@@ -11,15 +11,6 @@ pipeline {
                 sh "docker build -t appointment-image ."
             }
         }
-        stage("push image on dockerhub"){
-            steps{
-                withCredentials([usernamePassword(
-                    credentialsId: "dockerhubcreds",
-                    usernameVariable: "$dockerHubUser",
-                    passwordVariabel: "$dockerHubPass"
-                )])
-            }
-        }
         stage("test an application"){
             steps{
                 sh "test developer krege0"
