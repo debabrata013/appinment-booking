@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-svc
+  namespace: app-ns
+spec:
+  selector:
+    app: app-book
+
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
