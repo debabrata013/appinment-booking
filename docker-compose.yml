@@ -1,5 +1,5 @@
 services:
-  appintment-application:
+  appointment-application:
     image: priyanshijat6701/appointment-mini:latest
     container_name: appointment-app
     ports:
