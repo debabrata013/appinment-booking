@@ -4,6 +4,7 @@ metadata:
   name: app-svc
   namespace: app-ns
 spec:
+  type: NodePort
   selector:
     app: app-book
 
@@ -12,4 +13,4 @@ spec:
       port: 80
       targetPort: 3000
       nodePort: 30000
-    type: NodePort
+    
